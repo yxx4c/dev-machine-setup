@@ -33,6 +33,7 @@ rm commandlinetools.zip
 echo -e "\n# Android SDK" >> "$HOME/.zshrc"
 echo "export ANDROID_SDK_ROOT=$HOME/Android/sdk" >> "$HOME/.zshrc"
 echo "export PATH=\$PATH:\$ANDROID_SDK_ROOT/cmdline-tools/latest/bin" >> "$HOME/.zshrc"
+echo "export PATH=\$PATH:\$ANDROID_SDK_ROOT/platform-tools" >> "$HOME/.zshrc"
 
 # Reload .zshrc to apply changes
 source "$HOME/.zshrc"
@@ -41,6 +42,6 @@ echo "Android command-line tools have been downloaded and extracted to $DEST_DIR
 
 # Run sdkmanager to install required SDK components
 echo "Installing required SDK components..."
-sdkmanager "platforms;android-33" "build-tools;33.0.3" "extras;google;m2repository" "extras;android;m2repository"
+sdkmanager "platforms;android-33" "build-tools;33.0.3" "extras;google;m2repository" "extras;android;m2repository" "platform-tools"
 
 echo "Required SDK components have been installed."
