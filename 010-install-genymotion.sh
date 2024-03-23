@@ -7,7 +7,7 @@ GENYMOTION_URL="https://dl.genymotion.com/releases/genymotion-3.6.0/genymotion-3
 DOWNLOAD_DIR="$HOME/Downloads"
 
 # Define the installation directory
-INSTALL_DIR="$HOME/.local/app/genymotion"
+INSTALL_DIR="$HOME/.local/app/"
 
 # Create the download directory if it doesn't exist
 mkdir -p "$DOWNLOAD_DIR"
@@ -28,5 +28,7 @@ echo "Installing Genymotion..."
 
 # Clean up the downloaded file
 rm genymotion-*.bin
+
+ln -s $HOME/.local/app/genymotion/genymotion $HOME/.local/bin/genymotion
 
 echo "Genymotion has been installed to $INSTALL_DIR."
